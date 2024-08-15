@@ -14,6 +14,10 @@ import { MailService } from "./mail.service";
         transport: {
           host: config.get("MAIL_HOST"),
           port: config.get("MAIL_PORT"),
+          auth: {
+            user: config.get("MAIL_USER"),
+            pass: config.get("MAIL_PASS"),
+          },
           secure: false,
         },
         defaults: {
